@@ -7,8 +7,12 @@ live_design! {
     use link::shaders::*;
     use link::widgets::*;
 
+    //use crate::components::layout_templates::*;
     use crate::components::ui_options::*;
+
+    use crate::components::tab_my_ui::*;
     use crate::components::tab_overview::*;
+    use crate::components::tab_layout::*;
 
     UIZooTab = <RectView> {
         width: Fill, height: Fill,
@@ -54,12 +58,19 @@ live_design! {
                     tab_set_2 = Tabs {
                         tabs: [
                             tab_overview,
+                            tab_my_ui,
+                            tab_layout,
                         ],
                         selected: 0,
                     }
 
                     tab_overview = Tab { name: "Intro", template: PermanentTab, kind: TabOverView }
+                    tab_my_ui = Tab { name: "My UI", template: PermanentTab, kind: TabMyUI }
+                    tab_layout = Tab { name: "Layout Demos", template: PermanentTab, kind: TabLayout }
+
                     TabOverView = <UIZooTab> { <OverView> {} }
+                    TabMyUI = <UIZooTab> { <MyUI> {} }
+                    TabLayout = <UIZooTab> { <DemoLayout> {} }
 
                 }
 
