@@ -1,4 +1,4 @@
-//#![allow(unused)]
+#![allow(unused)]
 use makepad_widgets::*;
 use crate::components::*;
 
@@ -7,6 +7,7 @@ live_design! {
     use link::shaders::*;
     use link::widgets::*;
 
+    use crate::components::ui_options::*;
     use crate::components::tab_overview::*;
 
     UIZooTab = <RectView> {
@@ -28,7 +29,7 @@ live_design! {
             caption_bar = {
                 visible: true,
                 margin: {left: -200},
-                caption_label = { label = {text: "Makepad UI Zoo - 中文"} }
+                caption_label = { label = {text: "Makepad UI Zoo"} }
             },
 
             body = <View> {
@@ -57,10 +58,13 @@ live_design! {
                         selected: 0,
                     }
 
-                    tab_overview = Tab { name: "介绍", template: PermanentTab, kind: TabOverView }
+                    tab_overview = Tab { name: "Intro", template: PermanentTab, kind: TabOverView }
                     TabOverView = <UIZooTab> { <OverView> {} }
 
                 }
+
+                <UIOptions> {}
+
             }
         }
     }
@@ -68,8 +72,7 @@ live_design! {
 
 #[derive(Live, LiveHook)]
 pub struct App {
-    #[live] ui: WidgetRef,
-    #[rust] counter: usize
+    #[live] pub ui: WidgetRef,
 }
 
 impl LiveRegister for App {
@@ -80,7 +83,8 @@ impl LiveRegister for App {
 }
 
 impl MatchEvent for App{
-    fn handle_actions(&mut self, cx: &mut Cx, actions:&Actions){
+    fn handle_actions(&mut self, cx: &mut Cx, actions:&Actions) {
+        crate::components::handle_actions(self, cx, actions);
     }
 }
 

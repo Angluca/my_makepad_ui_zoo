@@ -4,8 +4,8 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-makepad-widgets = { git = "https://github.com/makepad/makepad", branch = "dev" }
-#makepad-widgets = { path = "../../__makepad/widgets"}
+#makepad-widgets = { git = "https://github.com/makepad/makepad", branch = "dev" }
+makepad-widgets = { path = "../../__makepad/widgets"}
 
 [profile.dev]
 incremental = false # 以较小的步骤编译您的二进制文件。

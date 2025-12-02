@@ -25,18 +25,18 @@ live_design! {
                 fit: Biggest,
             }
 
-            <H4> { text: "Makepad 是一个开源的、跨平台的 UI 框架，由 Rust 编写并为 Rust 服务。它可以在本地和 Web 上运行，支持所有主流平台：Windows、Linux、macOS、iOS 和 Android" }
+            <H4> { text: "Makepad is an open-source, cross-platform UI framework written in and for Rust. It runs natively and on the web, supporting all major platforms: Windows, Linux, macOS, iOS, and Android." }
             <P> {
-                text: "基于着色器架构构建的 Makepad 具有高性能，非常适合构建复杂应用，例如 Photoshop，甚至 3D/VR/AR 体验"
+                text: "Built on a shader-based architecture, Makepad delivers high performance, making it suitable for complex applications like Photoshop or even 3D/VR/AR experiences."
             }
             <P> {
-                text: "Makepad 的一大亮点是实时样式系统——无需重新编译或重启，就能立即反映 UI 代码的更改。这种紧密的反馈循环消除了开发者与设计师之间的隔阂，大幅提升协作效率和生产力"
+                text: "One of Makepad’s standout features is live styling — a powerful system that reflects UI code changes instantly without recompilation or restarts. This tight feedback loop bridges the gap between developers and designers, streamlining collaboration and maximizing productivity."
             }
             <P> {
-                text: "此示例应用程序展示了当前已支持的组件概览"
+                text: "This example application provides an overview of the currently supported widgets."
             }
 
-            <TextBox> { height: Fit, text: "UI Zoo 包含大量组件和变体，因此其加载时间并不能代表典型的 Makepad 应用程序" }
+            <TextBox> { height: Fit, text: "UI Zoo hosts a high number of widgets and variants, resulting in loading times not representative of typical Makepad applications." }
 
         }
     }
