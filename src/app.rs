@@ -58,20 +58,22 @@ live_design! {
                     tab_set_2 = Tabs {
                         tabs: [
                             tab_overview,
-                            tab_my_ui,
                             tab_layout,
+
+                            tab_my_ui,
                         ],
                         selected: 0,
                     }
 
                     tab_overview = Tab { name: "Intro", template: PermanentTab, kind: TabOverView }
-                    tab_my_ui = Tab { name: "My UI", template: PermanentTab, kind: TabMyUI }
                     tab_layout = Tab { name: "Layout Demos", template: PermanentTab, kind: TabLayout }
 
                     TabOverView = <UIZooTab> { <OverView> {} }
-                    TabMyUI = <UIZooTab> { <MyUI> {} }
                     TabLayout = <UIZooTab> { <DemoLayout> {} }
 
+                    // -- Tab template
+                    tab_my_ui = Tab { name: "My UI", template: PermanentTab, kind: TabMyUI }
+                    TabMyUI = <UIZooTab> { <MyUI> {} }
                 }
 
                 <UIOptions> {}
