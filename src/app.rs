@@ -7,12 +7,12 @@ live_design! {
     use link::shaders::*;
     use link::widgets::*;
 
-    //use crate::components::layout_templates::*;
     use crate::components::ui_options::*;
-
     use crate::components::tab_my_ui::*;
+
     use crate::components::tab_overview::*;
     use crate::components::tab_layout::*;
+    use crate::components::tab_button::*;
 
     UIZooTab = <RectView> {
         width: Fill, height: Fill,
@@ -59,33 +59,38 @@ live_design! {
                         tabs: [
                             tab_overview,
                             tab_layout,
+                            tab_button,
 
                             tab_my_ui,
                         ],
                         selected: 0,
                     }
 
+                    TabOverView = <UIZooTab> { <OverView> {} }
                     tab_overview = Tab { name: "Intro", template: PermanentTab, kind: TabOverView }
+
+                    TabLayout = <UIZooTab> { <DemoLayout> {} }
                     tab_layout = Tab { name: "Layout Demos", template: PermanentTab, kind: TabLayout }
 
-                    TabOverView = <UIZooTab> { <OverView> {} }
-                    TabLayout = <UIZooTab> { <DemoLayout> {} }
+                    TabButton = <UIZooTab> { <DemoButton> {} }
+                    tab_button = Tab { name: "Button", template: PermanentTab, kind: TabButton }
 
-                    // -- Tab template
-                    tab_my_ui = Tab { name: "My UI", template: PermanentTab, kind: TabMyUI }
+                    // -- Tab UI template
                     TabMyUI = <UIZooTab> { <MyUI> {} }
-                }
+                    tab_my_ui = Tab { name: "My UI", template: PermanentTab, kind: TabMyUI }
+                } // -- dock
 
                 <UIOptions> {}
 
-            }
-        }
-    }
+            } // -- body
+        } // -- ui
+    } // -- app
 }
 
 #[derive(Live, LiveHook)]
 pub struct App {
     #[live] pub ui: WidgetRef,
+    #[rust] pub counter: usize,
 }
 
 impl LiveRegister for App {
