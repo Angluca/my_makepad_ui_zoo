@@ -8,6 +8,7 @@ pub mod tab_my_ui;
 pub mod tab_overview;
 pub mod tab_layout;
 pub mod tab_button;
+pub mod tab_checkbox;
 
 pub fn live_design(cx: &mut Cx) {
     layout_templates::live_design(cx);
@@ -17,6 +18,7 @@ pub fn live_design(cx: &mut Cx) {
     tab_overview::live_design(cx);
     tab_layout::live_design(cx);
     tab_button::live_design(cx);
+    tab_checkbox::live_design(cx);
 }
 
 pub fn handle_actions(app: &mut App, cx: &mut Cx, actions:&Actions) {
@@ -24,5 +26,6 @@ pub fn handle_actions(app: &mut App, cx: &mut Cx, actions:&Actions) {
     tab_my_ui::handle_actions(app, cx, actions);
 
     tab_button::handle_actions(app, cx, actions);
+    tab_checkbox::handle_actions(app, cx, actions);
 }
 

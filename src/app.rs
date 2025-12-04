@@ -13,6 +13,7 @@ live_design! {
     use crate::components::tab_overview::*;
     use crate::components::tab_layout::*;
     use crate::components::tab_button::*;
+    use crate::components::tab_checkbox::*;
 
     UIZooTab = <RectView> {
         width: Fill, height: Fill,
@@ -60,6 +61,7 @@ live_design! {
                             tab_overview,
                             tab_layout,
                             tab_button,
+                            tab_checkbox,
 
                             tab_my_ui,
                         ],
@@ -68,12 +70,12 @@ live_design! {
 
                     TabOverView = <UIZooTab> { <OverView> {} }
                     tab_overview = Tab { name: "Intro", template: PermanentTab, kind: TabOverView }
-
                     TabLayout = <UIZooTab> { <DemoLayout> {} }
-                    tab_layout = Tab { name: "Layout Demos", template: PermanentTab, kind: TabLayout }
-
+                    tab_layout = Tab { name: "Layout", template: PermanentTab, kind: TabLayout }
                     TabButton = <UIZooTab> { <DemoButton> {} }
                     tab_button = Tab { name: "Button", template: PermanentTab, kind: TabButton }
+                    TabCheckBox = <UIZooTab> { <DemoCheckBox> {} }
+                    tab_checkbox = Tab { name: "CheckBox", template: PermanentTab, kind: TabCheckBox }
 
                     // -- Tab UI template
                     TabMyUI = <UIZooTab> { <MyUI> {} }
