@@ -11,10 +11,10 @@ live_design! {
     pub MyUI = <UIZooTabLayout_B> {
         desc = {
             //<Markdown> { body: dep("crate://self/resources/icon.md") }
-            <H1> { text: "Test desc"}
+            <H1> { text: "Test desc" }
         } // -- desc
         demos = {
-            <H4> { text: "Test demo"}
+            <H4> { text: "Test demo" }
             my_ui_btn = <Button> { text: "Click me Click me !" }
             <RoundedView> {
                 show_bg: true,

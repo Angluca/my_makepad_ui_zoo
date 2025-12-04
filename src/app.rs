@@ -14,6 +14,7 @@ live_design! {
     use crate::components::tab_layout::*;
     use crate::components::tab_button::*;
     use crate::components::tab_checkbox::*;
+    use crate::components::tab_dropdown::*;
 
     UIZooTab = <RectView> {
         width: Fill, height: Fill,
@@ -62,6 +63,7 @@ live_design! {
                             tab_layout,
                             tab_button,
                             tab_checkbox,
+                            tab_dropdown,
 
                             tab_my_ui,
                         ],
@@ -76,6 +78,8 @@ live_design! {
                     tab_button = Tab { name: "Button", template: PermanentTab, kind: TabButton }
                     TabCheckBox = <UIZooTab> { <DemoCheckBox> {} }
                     tab_checkbox = Tab { name: "CheckBox", template: PermanentTab, kind: TabCheckBox }
+                    TabDropDown = <UIZooTab> { <DemoDropDown> {} }
+                    tab_dropdown = Tab { name: "DropDown & PopupMenu", template: PermanentTab, kind: TabDropDown }
 
                     // -- Tab UI template
                     TabMyUI = <UIZooTab> { <MyUI> {} }
@@ -89,10 +93,13 @@ live_design! {
     } // -- app
 }
 
+use crate::components::tab_dropdown::DataBindingsForApp;
 #[derive(Live, LiveHook)]
 pub struct App {
     #[live] pub ui: WidgetRef,
     #[rust] pub counter: usize,
+    #[rust(DataBindingsForApp::new(cx))]
+    pub bindings: DataBindingsForApp,
 }
 
 impl LiveRegister for App {
@@ -105,6 +112,10 @@ impl LiveRegister for App {
 impl MatchEvent for App{
     fn handle_actions(&mut self, cx: &mut Cx, actions:&Actions) {
         crate::components::handle_actions(self, cx, actions);
+    }
+
+    fn handle_startup(&mut self, cx: &mut Cx) {
+        crate::components::handle_startup(self, cx);
     }
 }
 
