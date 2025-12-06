@@ -18,6 +18,8 @@ live_design! {
     use crate::components::tab_spinner::*;
     use crate::components::tab_html::*;
     use crate::components::tab_icon::*;
+    use crate::components::tab_iconset::*;
+    use crate::components::tab_image::*;
 
     UIZooTab = <RectView> {
         width: Fill, height: Fill,
@@ -71,6 +73,8 @@ live_design! {
                             tab_spinner,
                             tab_html,
                             tab_icon,
+                            tab_iconset,
+                            tab_image,
 
                             tab_my_ui,
                         ],
@@ -95,6 +99,10 @@ live_design! {
                     tab_html = Tab { name: "HTML", template: PermanentTab, kind: TabHTML }
                     TabIcon = <UIZooTab> { <DemoIcon> {} }
                     tab_icon = Tab { name: "Icon", template: PermanentTab, kind: TabIcon }
+                    TabIconSet = <UIZooTab> { <DemoIconSet> {} }
+                    tab_iconset = Tab { name: "IconSet", template: PermanentTab, kind: TabIconSet }
+                    TabImage = <UIZooTab> { <DemoImage> {} }
+                    tab_image = Tab { name: "Image", template: PermanentTab, kind: TabImage }
 
                     // -- Tab UI template
                     TabMyUI = <UIZooTab> { <MyUI> {} }

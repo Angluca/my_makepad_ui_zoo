@@ -16,6 +16,8 @@ pub mod tab_filetree;
 pub mod tab_spinner;
 pub mod tab_html;
 pub mod tab_icon;
+pub mod tab_iconset;
+pub mod tab_image;
 
 pub fn live_design(cx: &mut Cx) {
     layout_templates::live_design(cx);
@@ -33,6 +35,8 @@ pub fn live_design(cx: &mut Cx) {
     tab_spinner::live_design(cx);
     tab_html::live_design(cx);
     tab_icon::live_design(cx);
+    tab_iconset::live_design(cx);
+    tab_image::live_design(cx);
 }
 
 pub fn handle_actions(app: &mut App, cx: &mut Cx, actions:&Actions) {
