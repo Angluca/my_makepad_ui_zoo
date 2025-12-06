@@ -197,9 +197,9 @@ pub fn handle_actions(app: &mut App, cx: &mut Cx, actions:&Actions) {
     app.bindings.apply_over(cx, &db.nodes);
 }
 
-pub fn handle_startup(app: &mut App, cx: &mut Cx) {
-    //let ui = app.ui.clone();
-    let db = DataBindingStore::from_nodes(app.bindings.live_read());
-    data_bind(db.data_to_widgets(cx, &app.ui));
-}
+//pub fn handle_startup(app: &mut App, cx: &mut Cx) {
+    ////let ui = app.ui.clone();
+    //let db = DataBindingStore::from_nodes(app.bindings.live_read());
+    //data_bind(db.data_to_widgets(cx, &app.ui));
+//}
 

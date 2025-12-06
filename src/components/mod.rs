@@ -13,6 +13,7 @@ pub mod tab_button;
 pub mod tab_checkbox;
 pub mod tab_dropdown;
 pub mod tab_filetree;
+pub mod tab_spinner;
 
 pub fn live_design(cx: &mut Cx) {
     layout_templates::live_design(cx);
@@ -27,6 +28,7 @@ pub fn live_design(cx: &mut Cx) {
     tab_checkbox::live_design(cx);
     tab_dropdown::live_design(cx);
     tab_filetree::live_design(cx);
+    tab_spinner::live_design(cx);
 }
 
 pub fn handle_actions(app: &mut App, cx: &mut Cx, actions:&Actions) {
@@ -38,6 +40,3 @@ pub fn handle_actions(app: &mut App, cx: &mut Cx, actions:&Actions) {
     tab_dropdown::handle_actions(app, cx, actions);
 }
 
-pub fn handle_startup(app: &mut App, cx: &mut Cx) {
-    tab_dropdown::handle_startup(app, cx);
-}

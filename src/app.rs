@@ -16,6 +16,7 @@ live_design! {
     use crate::components::tab_checkbox::*;
     use crate::components::tab_dropdown::*;
     use crate::components::tab_filetree::*;
+    use crate::components::tab_spinner::*;
 
     UIZooTab = <RectView> {
         width: Fill, height: Fill,
@@ -66,6 +67,7 @@ live_design! {
                             tab_checkbox,
                             tab_dropdown,
                             tab_filetree,
+                            tab_spinner,
 
                             tab_my_ui,
                         ],
@@ -84,6 +86,8 @@ live_design! {
                     tab_dropdown = Tab { name: "DropDown & PopupMenu", template: PermanentTab, kind: TabDropDown }
                     TabFileTree = <UIZooTab> { <DemoFT> {} }
                     tab_filetree = Tab { name: "FileTree", template: PermanentTab, kind: TabFileTree }
+                    TabSpinner = <UIZooTab> { <DemoSpinner> {} }
+                    tab_filetree = Tab { name: "Spinner", template: PermanentTab, kind: TabSpinner }
 
                     // -- Tab UI template
                     TabMyUI = <UIZooTab> { <MyUI> {} }
@@ -116,10 +120,6 @@ impl LiveRegister for App {
 impl MatchEvent for App{
     fn handle_actions(&mut self, cx: &mut Cx, actions:&Actions) {
         crate::components::handle_actions(self, cx, actions);
-    }
-
-    fn handle_startup(&mut self, cx: &mut Cx) {
-        crate::components::handle_startup(self, cx);
     }
 }
 
