@@ -28,17 +28,17 @@ live_design! {
             <H4> { text: "Width & Height"}
             <UIZooRowH> {
                 flow: Right,
-                height: 100,
+                height: 100.,
                 <Box> {
-                    width: 100, height: 60,
+                    width: 100., height: 60.,
                     <BoxLabel> { text: " width: 100\nheight: 60" }
                 }
                 <Box> {
-                    width: 100, height: Fill,
+                    width: 100., height: Fill,
                     <BoxLabel> { text: " width: 100\nheight: Fill" }
                 }
                 <Box> {
-                    width: 150, height: Fit,
+                    width: 150., height: Fit,
                     <BoxLabel> { text: " width: 150\nheight: Fit" }
                 }
             }
@@ -61,12 +61,12 @@ live_design! {
                 }
                 <Box> {
                     width: Fit, height: Fit,
-                    margin: { top: 5., left: 10 }
+                    margin: { top: 5., left: 10. }
                     <BoxLabel> { text: "margin: { top: 5., left: 20 }" }
                 }
                 <Box> {
                     width: Fit, height: Fit,
-                    margin: { top: 0., left: 20, right: 0, bottom: 0. }
+                    margin: { top: 0., left: 20., right: 0., bottom: 0. }
                     <BoxLabel> { text: "margin: { top: 0., left: 20, right: 0, bottom: 0. }" }
                 }
             }
@@ -189,7 +189,7 @@ live_design! {
                                 show_bg: true,
                                 draw_bg: { color: #008 }
 
-                                width: 200, height: Fill,
+                                width: 200., height: Fill,
                                 padding: 10.,
                                 <H2> { width: Fit, height: Fit, text: "Menu" }
                             }
@@ -222,7 +222,7 @@ live_design! {
                             show_bg: true,
                             draw_bg: { color: #008 }
 
-                            width: 200, height: 100,
+                            width: 200., height: 100.,
                             padding: 10.,
                             <H2> { width: Fit, height: Fit, text: "Menu" }
                         }

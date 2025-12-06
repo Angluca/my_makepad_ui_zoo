@@ -16,7 +16,7 @@ live_design! {
             <H4> { text: "Default" }
             <View> {
                 show_bg: true, draw_bg: { color: (THEME_COLOR_INSET_1) }
-                width: Fill, height: 150, flow: Down
+                width: Fill, height: 150., flow: Down
                 <Image> { source: (DUCKY) }
             }
 
@@ -24,15 +24,15 @@ live_design! {
             <H4> { text: "min_height" }
             <View> {
                 show_bg: true, draw_bg: { color: (THEME_COLOR_INSET_1) }
-                width: Fill, height: 150
-                <Image> { height: Fill, min_height: 100, source: (DUCKY) }
+                width: Fill, height: 150.
+                <Image> { height: Fill, min_height: 100., source: (DUCKY) }
             }
 
             <Hr> {}
             <H4> { text: "width_scale" }
             <View> {
                 show_bg: true, draw_bg: { color: (THEME_COLOR_INSET_1) }
-                width: Fill, height: 150
+                width: Fill, height: 150.
                 <Image> { width: Fill, width_scale: 1.1, source: (DUCKY) }
             }
 
@@ -40,7 +40,7 @@ live_design! {
             <H4> { text: "fit: Stretch" }
             <View> {
                 show_bg: true, draw_bg: { color: (THEME_COLOR_INSET_1) }
-                width: Fill, height: 150
+                width: Fill, height: 150.
                 <Image> { width: Fill, height: Fill, fit: Stretch, source: (DUCKY) }
             }
 
@@ -48,7 +48,7 @@ live_design! {
             <H4> { text: "fit: Horizontal" }
             <View> {
                 show_bg: true, draw_bg: { color: (THEME_COLOR_INSET_1) }
-                width: Fill, height: 150
+                width: Fill, height: 150.
                 <Image> { width: Fill, height: Fill, fit: Horizontal, source: (DUCKY) }
             }
 
@@ -56,7 +56,7 @@ live_design! {
             <H4> { text: "fit: Vertical" }
             <View> {
                 show_bg: true, draw_bg: { color: (THEME_COLOR_INSET_1) }
-                width: Fill, height: 150
+                width: Fill, height: 150.
                 <Image> { width: Fill, height: Fill, fit: Vertical, source: (DUCKY) }
             }
 
@@ -64,7 +64,7 @@ live_design! {
             <H4> { text: "fit: Smallest" }
             <View> {
                 show_bg: true, draw_bg: { color: (THEME_COLOR_INSET_1) }
-                width: Fill, height: 150
+                width: Fill, height: 150.
                 <Image> { width: Fill, height: Fill, fit: Smallest, source: (DUCKY) }
             }
 
@@ -72,7 +72,7 @@ live_design! {
             <H4> { text: "fit: Biggest" }
             <View> {
                 show_bg: true, draw_bg: { color: (THEME_COLOR_INSET_1) }
-                width: Fill, height: 150
+                width: Fill, height: 150.
                 <Image> { width: Fill, height: Fill, fit: Biggest, source: (DUCKY) }
             }
         } // -- demos

@@ -8,7 +8,7 @@ live_design! {
     pub UIZooTabLayout_B = <View> {
         height: Fill, width: Fill
         flow: Right,
-        padding: 0
+        padding: 0.
         spacing: 0.
 
         desc = <RoundedView> {

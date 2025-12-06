@@ -19,6 +19,7 @@ pub mod tab_icon;
 pub mod tab_iconset;
 pub mod tab_image;
 pub mod tab_imageblend;
+pub mod tab_label;
 
 pub fn live_design(cx: &mut Cx) {
     layout_templates::live_design(cx);
@@ -39,6 +40,7 @@ pub fn live_design(cx: &mut Cx) {
     tab_iconset::live_design(cx);
     tab_image::live_design(cx);
     tab_imageblend::live_design(cx);
+    tab_label::live_design(cx);
 }
 
 pub fn handle_actions(app: &mut App, cx: &mut Cx, actions:&Actions) {

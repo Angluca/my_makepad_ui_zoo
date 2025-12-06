@@ -37,7 +37,7 @@ live_design! {
                 width: Fit, height: Fit
 
                 icon_walk: {
-                    width: 200, height: 100
+                    width: 200., height: 100.
                 }
 
                 draw_bg: { color: #22f }

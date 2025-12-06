@@ -14,13 +14,13 @@ live_design! {
 
         <ScrollYView> {
             flow: Down,
-            width: 560, height: Fill,
+            width: 560., height: Fill,
             align: {x: 0, y: 0.4}
             spacing: (THEME_SPACE_2),
 
             <Image> {
-                margin: {bottom: 10},
-                width: 250, height: 36.5,
+                margin: {bottom: 10.},
+                width: 250., height: 36.5,
                 source: dep("crate://self/resources/logo_makepad.png"),
                 fit: Biggest,
             }

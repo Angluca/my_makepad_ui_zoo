@@ -77,7 +77,7 @@ live_design! {
             <UIZooRowH> {
                 height: Fit,
                 flow: Right,
-                align: { x: 0, y: 0.5 }
+                align: { x: 0., y: 0.5 }
                 simple_checkbox = <CheckBox> { text: "<CheckBox>" }
                 simple_check_output = <Label> { text: "what?" }
             }
@@ -86,9 +86,9 @@ live_design! {
             <UIZooRowH> {
                 <CheckBoxCustom> {
                     text: "<CheckBoxCustom>",
-                    align: { x: 0, y: .5 }
-                    padding: 0,
-                    margin: 0,
+                    align: { x: 0., y: 0.5 }
+                    padding: 0.,
+                    margin: 0.,
 
                     label_walk: {
                         width: Fit, height: Fit,
@@ -122,12 +122,12 @@ live_design! {
 
                     label_walk: {
                         width: Fit, height: Fit
-                        margin: <THEME_MSPACE_H_1> { left: 30 }
+                        margin: <THEME_MSPACE_H_1> { left: 30. }
                     }
 
                     draw_bg: {
                         check_type: Check
-                        size: 30
+                        size: 30.
 
                         border_size: (THEME_BEVELING)
                         border_radius: (THEME_CORNER_RADIUS)
