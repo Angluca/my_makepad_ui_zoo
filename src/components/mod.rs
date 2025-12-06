@@ -2,6 +2,8 @@ use makepad_widgets::*;
 use crate::app::App;
 
 pub mod layout_templates;
+pub mod demofiletree;
+
 pub mod ui_options;
 pub mod tab_my_ui;
 
@@ -10,9 +12,12 @@ pub mod tab_layout;
 pub mod tab_button;
 pub mod tab_checkbox;
 pub mod tab_dropdown;
+pub mod tab_filetree;
 
 pub fn live_design(cx: &mut Cx) {
     layout_templates::live_design(cx);
+    demofiletree::live_design(cx);
+
     ui_options::live_design(cx);
     tab_my_ui::live_design(cx);
 
@@ -21,6 +26,7 @@ pub fn live_design(cx: &mut Cx) {
     tab_button::live_design(cx);
     tab_checkbox::live_design(cx);
     tab_dropdown::live_design(cx);
+    tab_filetree::live_design(cx);
 }
 
 pub fn handle_actions(app: &mut App, cx: &mut Cx, actions:&Actions) {

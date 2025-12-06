@@ -15,6 +15,7 @@ live_design! {
     use crate::components::tab_button::*;
     use crate::components::tab_checkbox::*;
     use crate::components::tab_dropdown::*;
+    use crate::components::tab_filetree::*;
 
     UIZooTab = <RectView> {
         width: Fill, height: Fill,
@@ -64,6 +65,7 @@ live_design! {
                             tab_button,
                             tab_checkbox,
                             tab_dropdown,
+                            tab_filetree,
 
                             tab_my_ui,
                         ],
@@ -80,6 +82,8 @@ live_design! {
                     tab_checkbox = Tab { name: "CheckBox", template: PermanentTab, kind: TabCheckBox }
                     TabDropDown = <UIZooTab> { <DemoDropDown> {} }
                     tab_dropdown = Tab { name: "DropDown & PopupMenu", template: PermanentTab, kind: TabDropDown }
+                    TabFileTree = <UIZooTab> { <DemoFT> {} }
+                    tab_filetree = Tab { name: "FileTree", template: PermanentTab, kind: TabFileTree }
 
                     // -- Tab UI template
                     TabMyUI = <UIZooTab> { <MyUI> {} }
