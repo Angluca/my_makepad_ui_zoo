@@ -1,6 +1,5 @@
-#![allow(unused)]
+//#![allow(unused)]
 use makepad_widgets::*;
-use crate::components::*;
 
 live_design! {
     use link::theme::*;
@@ -17,6 +16,8 @@ live_design! {
     use crate::components::tab_dropdown::*;
     use crate::components::tab_filetree::*;
     use crate::components::tab_spinner::*;
+    use crate::components::tab_html::*;
+    use crate::components::tab_icon::*;
 
     UIZooTab = <RectView> {
         width: Fill, height: Fill,
@@ -68,6 +69,8 @@ live_design! {
                             tab_dropdown,
                             tab_filetree,
                             tab_spinner,
+                            tab_html,
+                            tab_icon,
 
                             tab_my_ui,
                         ],
@@ -88,6 +91,10 @@ live_design! {
                     tab_filetree = Tab { name: "FileTree", template: PermanentTab, kind: TabFileTree }
                     TabSpinner = <UIZooTab> { <DemoSpinner> {} }
                     tab_filetree = Tab { name: "Spinner", template: PermanentTab, kind: TabSpinner }
+                    TabHTML = <UIZooTab> { <DemoHTML> {} }
+                    tab_html = Tab { name: "HTML", template: PermanentTab, kind: TabHTML }
+                    TabIcon = <UIZooTab> { <DemoIcon> {} }
+                    tab_icon = Tab { name: "Icon", template: PermanentTab, kind: TabIcon }
 
                     // -- Tab UI template
                     TabMyUI = <UIZooTab> { <MyUI> {} }
