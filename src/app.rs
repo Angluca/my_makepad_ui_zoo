@@ -22,6 +22,7 @@ live_design! {
     use crate::components::tab_image::*;
     use crate::components::tab_imageblend::*;
     use crate::components::tab_label::*;
+    use crate::components::tab_shader::*;
 
     UIZooTab = <RectView> {
         width: Fill, height: Fill,
@@ -79,6 +80,7 @@ live_design! {
                             tab_image,
                             tab_imageblend,
                             tab_label,
+                            tab_shader,
 
                             tab_my_ui,
                         ],
@@ -111,6 +113,8 @@ live_design! {
                     tab_imageblend = Tab { name: "ImageBlend", template: PermanentTab, kind: TabImageBlend }
                     TabLabel = <UIZooTab> { <DemoLabel> {} }
                     tab_label = Tab { name: "Label", template: PermanentTab, kind: TabLabel }
+                    TabShader = <UIZooTab> { <DemoShader> {} }
+                    tab_shader = Tab { name: "Shader", template: PermanentTab, kind: TabShader }
 
                     // -- Tab UI template
                     TabMyUI = <UIZooTab> { <MyUI> {} }
