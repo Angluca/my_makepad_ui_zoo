@@ -23,6 +23,7 @@ pub mod tab_label;
 pub mod tab_linklabel;
 pub mod tab_shader;
 pub mod tab_markdown;
+pub mod tab_pageflip;
 
 pub fn live_design(cx: &mut Cx) {
     layout_templates::live_design(cx);
@@ -47,6 +48,7 @@ pub fn live_design(cx: &mut Cx) {
     tab_linklabel::live_design(cx);
     tab_shader::live_design(cx);
     tab_markdown::live_design(cx);
+    tab_pageflip::live_design(cx);
 }
 
 pub fn handle_actions(app: &mut App, cx: &mut Cx, actions:&Actions) {
@@ -58,5 +60,6 @@ pub fn handle_actions(app: &mut App, cx: &mut Cx, actions:&Actions) {
     tab_dropdown::handle_actions(app, cx, actions);
     tab_imageblend::handle_actions(app, cx, actions);
     tab_shader::handle_actions(app, cx, actions);
+    tab_pageflip::handle_actions(app, cx, actions);
 }
 
