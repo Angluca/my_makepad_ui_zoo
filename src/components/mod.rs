@@ -20,6 +20,7 @@ pub mod tab_iconset;
 pub mod tab_image;
 pub mod tab_imageblend;
 pub mod tab_label;
+pub mod tab_linklabel;
 pub mod tab_shader;
 
 pub fn live_design(cx: &mut Cx) {
@@ -42,6 +43,7 @@ pub fn live_design(cx: &mut Cx) {
     tab_image::live_design(cx);
     tab_imageblend::live_design(cx);
     tab_label::live_design(cx);
+    tab_linklabel::live_design(cx);
     tab_shader::live_design(cx);
 }
 
