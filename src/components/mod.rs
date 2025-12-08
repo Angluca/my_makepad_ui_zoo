@@ -22,6 +22,7 @@ pub mod tab_imageblend;
 pub mod tab_label;
 pub mod tab_linklabel;
 pub mod tab_shader;
+pub mod tab_markdown;
 
 pub fn live_design(cx: &mut Cx) {
     layout_templates::live_design(cx);
@@ -45,6 +46,7 @@ pub fn live_design(cx: &mut Cx) {
     tab_label::live_design(cx);
     tab_linklabel::live_design(cx);
     tab_shader::live_design(cx);
+    tab_markdown::live_design(cx);
 }
 
 pub fn handle_actions(app: &mut App, cx: &mut Cx, actions:&Actions) {
