@@ -25,6 +25,7 @@ pub mod tab_shader;
 pub mod tab_markdown;
 pub mod tab_pageflip;
 pub mod tab_portallist;
+pub mod tab_radiobutton;
 
 pub fn live_design(cx: &mut Cx) {
     layout_templates::live_design(cx);
@@ -51,6 +52,7 @@ pub fn live_design(cx: &mut Cx) {
     tab_markdown::live_design(cx);
     tab_pageflip::live_design(cx);
     tab_portallist::live_design(cx);
+    tab_radiobutton::live_design(cx);
 }
 
 pub fn handle_actions(app: &mut App, cx: &mut Cx, actions:&Actions) {
@@ -63,5 +65,6 @@ pub fn handle_actions(app: &mut App, cx: &mut Cx, actions:&Actions) {
     tab_imageblend::handle_actions(app, cx, actions);
     tab_shader::handle_actions(app, cx, actions);
     tab_pageflip::handle_actions(app, cx, actions);
+    tab_radiobutton::handle_actions(app, cx, actions);
 }
 
