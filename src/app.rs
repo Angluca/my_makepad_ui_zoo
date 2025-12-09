@@ -26,6 +26,7 @@ live_design! {
     use crate::components::tab_shader::*;
     use crate::components::tab_markdown::*;
     use crate::components::tab_pageflip::*;
+    use crate::components::tab_portallist::*;
 
     UIZooTab = <RectView> {
         width: Fill, height: Fill,
@@ -87,6 +88,7 @@ live_design! {
                             tab_shader,
                             tab_markdown,
                             tab_pageflip,
+                            tab_portallist,
 
                             tab_my_ui,
                         ],
@@ -127,6 +129,8 @@ live_design! {
                     tab_markdown = Tab { name: "Markdown", template: PermanentTab, kind: TabMarkdown }
                     TabPageFlip = <UIZooTab> { <DemoPageFlip> {} }
                     tab_pageflip = Tab { name: "PageFlip", template: PermanentTab, kind: TabPageFlip }
+                    TabPortalList = <UIZooTab> { <DemoPortalList> {} }
+                    tab_portallist = Tab { name: "PortalList", template: PermanentTab, kind: TabPortalList }
 
                     // -- Tab UI template
                     TabMyUI = <UIZooTab> { <MyUI> {} }

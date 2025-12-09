@@ -24,6 +24,7 @@ pub mod tab_linklabel;
 pub mod tab_shader;
 pub mod tab_markdown;
 pub mod tab_pageflip;
+pub mod tab_portallist;
 
 pub fn live_design(cx: &mut Cx) {
     layout_templates::live_design(cx);
@@ -49,6 +50,7 @@ pub fn live_design(cx: &mut Cx) {
     tab_shader::live_design(cx);
     tab_markdown::live_design(cx);
     tab_pageflip::live_design(cx);
+    tab_portallist::live_design(cx);
 }
 
 pub fn handle_actions(app: &mut App, cx: &mut Cx, actions:&Actions) {
