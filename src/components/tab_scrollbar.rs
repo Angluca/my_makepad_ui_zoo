@@ -1,0 +1,23 @@
+use makepad_widgets::*;
+
+live_design! {
+    use link::theme::*;
+    use link::shaders::*;
+    use link::widgets::*;
+
+    use crate::components::layout_templates::*;
+
+    pub DemoScrollBar = <UIZooTabLayout_B> {
+        desc = {
+            <Markdown> { body: dep("crate://self/resources/scrollbar.md") }
+        } // -- desc
+        demos = {
+            <GradientYView> {
+                width: Fill, height: 4000.
+                draw_bg: { color_2: #f00 }
+            }
+            scroll_bars: <ScrollBars> {}
+        } // -- demos
+    }
+}
+
