@@ -26,6 +26,7 @@ pub mod tab_markdown;
 pub mod tab_pageflip;
 pub mod tab_portallist;
 pub mod tab_radiobutton;
+pub mod tab_rotary;
 
 pub fn live_design(cx: &mut Cx) {
     layout_templates::live_design(cx);
@@ -53,6 +54,7 @@ pub fn live_design(cx: &mut Cx) {
     tab_pageflip::live_design(cx);
     tab_portallist::live_design(cx);
     tab_radiobutton::live_design(cx);
+    tab_rotary::live_design(cx);
 }
 
 pub fn handle_actions(app: &mut App, cx: &mut Cx, actions:&Actions) {
