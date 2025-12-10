@@ -29,6 +29,7 @@ pub mod tab_radiobutton;
 pub mod tab_rotary;
 pub mod tab_rotatedimage;
 pub mod tab_scrollbar;
+pub mod tab_slider;
 
 pub fn live_design(cx: &mut Cx) {
     layout_templates::live_design(cx);
@@ -59,6 +60,7 @@ pub fn live_design(cx: &mut Cx) {
     tab_rotary::live_design(cx);
     tab_rotatedimage::live_design(cx);
     tab_scrollbar::live_design(cx);
+    tab_slider::live_design(cx);
 }
 
 pub fn handle_actions(app: &mut App, cx: &mut Cx, actions:&Actions) {
