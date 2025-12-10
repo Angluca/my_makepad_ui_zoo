@@ -29,6 +29,7 @@ live_design! {
     use crate::components::tab_portallist::*;
     use crate::components::tab_radiobutton::*;
     use crate::components::tab_rotary::*;
+    use crate::components::tab_rotatedimage::*;
 
     UIZooTab = <RectView> {
         width: Fill, height: Fill,
@@ -93,6 +94,7 @@ live_design! {
                             tab_portallist,
                             tab_radiobutton,
                             tab_rotary,
+                            tab_rotatedimage,
 
                             tab_my_ui,
                         ],
@@ -139,6 +141,8 @@ live_design! {
                     tab_radiobutton = Tab { name: "RadioButton", template: PermanentTab, kind: TabRadioButton }
                     TabRotary = <UIZooTab> { <DemoRotary> {} }
                     tab_rotary = Tab { name: "Rotary", template: PermanentTab, kind: TabRotary }
+                    TabRotatedImage = <UIZooTab> { <DemoRotatedImage> {} }
+                    tab_rotatedimage = Tab { name: "RotatedImage", template: PermanentTab, kind: TabRotatedImage }
 
                     // -- Tab UI template
                     TabMyUI = <UIZooTab> { <MyUI> {} }
