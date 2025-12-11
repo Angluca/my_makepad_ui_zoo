@@ -34,6 +34,7 @@ live_design! {
     use crate::components::tab_slider::*;
     use crate::components::tab_slidesview::*;
     use crate::components::tab_textinput::*;
+    use crate::components::tab_view::*;
 
     UIZooTab = <RectView> {
         width: Fill, height: Fill,
@@ -103,6 +104,7 @@ live_design! {
                             tab_slider,
                             tab_slidesview,
                             tab_textinput,
+                            tab_view,
 
                             tab_my_ui,
                         ],
@@ -159,6 +161,8 @@ live_design! {
                     tab_slidesview = Tab { name: "SlidesView", template: PermanentTab, kind: TabSlidesView }
                     TabTextInput = <UIZooTab> { <DemoTextInput> {} }
                     tab_textinput = Tab { name: "TextInput", template: PermanentTab, kind: TabTextInput }
+                    TabView = <UIZooTab> { <DemoView> {} }
+                    tab_view = Tab { name: "View", template: PermanentTab, kind: TabView }
 
                     // -- Tab UI template
                     TabMyUI = <UIZooTab> { <MyUI> {} }

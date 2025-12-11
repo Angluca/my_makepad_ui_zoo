@@ -32,6 +32,7 @@ pub mod tab_scrollbar;
 pub mod tab_slider;
 pub mod tab_slidesview;
 pub mod tab_textinput;
+pub mod tab_view;
 
 pub fn live_design(cx: &mut Cx) {
     layout_templates::live_design(cx);
@@ -65,6 +66,7 @@ pub fn live_design(cx: &mut Cx) {
     tab_slider::live_design(cx);
     tab_slidesview::live_design(cx);
     tab_textinput::live_design(cx);
+    tab_view::live_design(cx);
 }
 
 pub fn handle_actions(app: &mut App, cx: &mut Cx, actions:&Actions) {
