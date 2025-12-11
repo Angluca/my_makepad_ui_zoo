@@ -32,6 +32,7 @@ live_design! {
     use crate::components::tab_rotatedimage::*;
     use crate::components::tab_scrollbar::*;
     use crate::components::tab_slider::*;
+    use crate::components::tab_slidesview::*;
 
     UIZooTab = <RectView> {
         width: Fill, height: Fill,
@@ -99,6 +100,7 @@ live_design! {
                             tab_rotatedimage,
                             tab_scrollbar,
                             tab_slider,
+                            tab_slidesview,
 
                             tab_my_ui,
                         ],
@@ -150,7 +152,9 @@ live_design! {
                     TabScrollBar = <UIZooTab> { <DemoScrollBar> {} }
                     tab_scrollbar = Tab { name: "ScrollBar", template: PermanentTab, kind: TabScrollBar }
                     TabSlider = <UIZooTab> { <DemoSlider> {} }
-                    tab_slider = Tab { name: "ScrollBar", template: PermanentTab, kind: TabSlider }
+                    tab_slider = Tab { name: "Slider", template: PermanentTab, kind: TabSlider }
+                    TabSlidesView = <UIZooTab> { <DemoSlidesView> {} }
+                    tab_slidesview = Tab { name: "SlidesView", template: PermanentTab, kind: TabSlidesView }
 
                     // -- Tab UI template
                     TabMyUI = <UIZooTab> { <MyUI> {} }

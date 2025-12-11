@@ -30,6 +30,7 @@ pub mod tab_rotary;
 pub mod tab_rotatedimage;
 pub mod tab_scrollbar;
 pub mod tab_slider;
+pub mod tab_slidesview;
 
 pub fn live_design(cx: &mut Cx) {
     layout_templates::live_design(cx);
@@ -61,6 +62,7 @@ pub fn live_design(cx: &mut Cx) {
     tab_rotatedimage::live_design(cx);
     tab_scrollbar::live_design(cx);
     tab_slider::live_design(cx);
+    tab_slidesview::live_design(cx);
 }
 
 pub fn handle_actions(app: &mut App, cx: &mut Cx, actions:&Actions) {
