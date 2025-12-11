@@ -31,6 +31,7 @@ pub mod tab_rotatedimage;
 pub mod tab_scrollbar;
 pub mod tab_slider;
 pub mod tab_slidesview;
+pub mod tab_textinput;
 
 pub fn live_design(cx: &mut Cx) {
     layout_templates::live_design(cx);
@@ -63,6 +64,7 @@ pub fn live_design(cx: &mut Cx) {
     tab_scrollbar::live_design(cx);
     tab_slider::live_design(cx);
     tab_slidesview::live_design(cx);
+    tab_textinput::live_design(cx);
 }
 
 pub fn handle_actions(app: &mut App, cx: &mut Cx, actions:&Actions) {
@@ -76,5 +78,6 @@ pub fn handle_actions(app: &mut App, cx: &mut Cx, actions:&Actions) {
     tab_shader::handle_actions(app, cx, actions);
     tab_pageflip::handle_actions(app, cx, actions);
     tab_radiobutton::handle_actions(app, cx, actions);
+    tab_textinput::handle_actions(app, cx, actions);
 }
 
